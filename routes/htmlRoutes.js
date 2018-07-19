@@ -24,4 +24,13 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
+
+  //Potential username and password post route
+  // app.post("/login",
+  //   passport.authenticate("local", {
+  //     successRedirect: "/",
+  //     failureRedirect: "/login",
+  //     failureFlash: true
+  //   })
+  // );
 };

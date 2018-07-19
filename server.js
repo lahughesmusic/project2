@@ -2,6 +2,8 @@ require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
+var passport = require("passport"),
+  LocalStrategy = require("passport-local").Strategy;
 
 var db = require("./models");
 
@@ -35,8 +37,8 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync(syncOptions).then(function () {
+  app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
@@ -44,5 +46,21 @@ db.sequelize.sync(syncOptions).then(function() {
     );
   });
 });
+
+//Potential passport code
+// passport.use(new LocalStrategy(
+//   function (username, password, done) {
+//     User.findOne({ username: username }, function (err, user) {
+//       if (err) { return done(err); }
+//       if (!user) {
+//         return done(null, false, { message: "Incorrect username." });
+//       }
+//       if (!user.validPassword(password)) {
+//         return done(null, false, { message: "Incorrect password." });
+//       }
+//       return done(null, user);
+//     });
+//   }
+// ));
 
 module.exports = app;
