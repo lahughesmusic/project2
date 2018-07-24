@@ -3,14 +3,14 @@
 }
 
 .form-group{
-  width: 50%;
+  width: 30%;
   margin: auto;
   margin: 0, auto;
   
 }
 
 .signUp{
-  width: 50px;
+  width: 30px;
   margin: 0, auto;
 
   
@@ -22,3 +22,140 @@
   margin: 0, auto;
 
 }
+
+body{
+
+  background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2013/07/26/124271/a2af799eed5ed08b8e8d9bc7b914c148-700.jpg");
+}
+
+#jumbotron{
+  background-color: rgb(15, 15, 243)!important;
+
+}
+
+
+#petPholio{
+color: yellow; 
+font-family: 'Indie Flower', cursive; 
+font-size: 100px;
+margin-left: 100px;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+#pawPrint{
+  height: 30px;
+  width: 30px;
+  margin-left: 100px;
+  margin-top: 60px;
+  color: white;
+
+}
+
+#pawPrint2{
+  height: 30px;
+  width: 30px;
+  margin-left: 100px;
+  margin-top: 20px;
+
+}
+
+#cat{
+  height: 50px;
+}
+
+#form{
+  
+  margin: 10px;
+  border-radius: .5em;
+  color: white;
+
+  
+  
+}
+
+#opacity{
+  opacity: .5;
+  background-color: lightgray;
+  
+  
+  
+}
+
+#petPic{
+  width: 200px;
+  height: 200px;
+  border-radius: .2em;
+  
+}
+
+@import "https://fonts.googleapis.com/css?family=Raleway";
+* { box-sizing: border-box; }
+body { 
+  margin: 0; 
+  padding: 0; 
+  background: #333;
+  font-family: Raleway; 
+  text-transform: uppercase; 
+  font-size: 11px; 
+}
+h1{ margin: 0; }
+#contact { 
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  margin: 4em auto;
+  width: 100px; 
+  height: 30px; 
+  line-height: 30px;
+  background: teal;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+#contact:hover { background: #666; }
+#contact:active { background: #444; }
+
+#contactForm { 
+  display: none;
+
+  border: 6px solid salmon; 
+  padding: 2em;
+  width: 400px;
+  text-align: center;
+  background-color: lightgray;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%)
+  
+}
+
+input, textarea { 
+  margin: .8em auto;
+  font-family: inherit; 
+  text-transform: inherit; 
+  font-size: inherit;
+  
+  display: block; 
+  width: 280px; 
+  padding: .4em;
+}
+textarea { height: 80px; resize: none; }
+
+.formBtn { 
+  width: 140px;
+  display: inline-block;
+  
+  background: teal;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.2em;
+  border: none;
+  height: 30px;
+}
+
