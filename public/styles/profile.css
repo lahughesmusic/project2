@@ -1,0 +1,89 @@
+#petPic{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-top: 30px;
+    border-radius: 2em;
+    box-shadow: 10px 10px px black;
+}
+
+  body{
+      /* background-color: darkgray; */
+      background-image: url('https://i.pinimg.com/originals/96/f1/f8/96f1f8f3540b2189e5dacd8e8aec57c8.jpg');
+      
+  }
+
+  #bioText{
+      background-color: lightgrey;
+
+  }
+
+
+#nameAppend{
+    color: white;
+    font-family: 'Indie Flower', cursive; 
+    font-size: 100px;
+    margin: 0 auto;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    
+    
+    }
+
+
+.card{
+    border-radius: .5em;
+    opacity: .9;
+}
+
+#cardTitle{
+    color: white; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 30px;
+    
+    
+    
+    
+    
+
+}
+
+img{
+    height: 200px;
+    width: 100%;
+    
+
+}
+
+
+h1{
+    font-size: 20px;
+}
+
+#bio{
+    color: white;
+    font-family: 'Indie Flower', cursive; 
+    font-size: 20px;
+    
+}
+
+#nameAppend{
+    
+    margin-left: 40px;
+    margin-top: 60px;
+    font-size: 120px;
+}
+
+#centerBio{
+   margin-left: 200px;
+   margin-right: 200px;
+    border: 2px solid white;
+    border-radius: 2em;
+
+}
+
+#profileDiv{
+    margin: 0 auto;
+
+}
+
+
