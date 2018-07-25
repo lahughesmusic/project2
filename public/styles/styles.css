@@ -1,3 +1,14 @@
+body{
+  background: 
+  radial-gradient(circle at 100% 50%, transparent 20%, rgba(255, 255, 255, 0.483) 21%, rgba(255,255,255,.3) 34%, transparent 35%, transparent),
+  radial-gradient(circle at 0% 50%, transparent 20%, rgba(255,255,255,.3) 21%, rgba(255,255,255,.3) 34%, transparent 35%, transparent) 0 -50px;
+  background-color: lightblue!important;
+  background-size:75px 100px;
+  /* background-repeat: no-repeat!important;
+  background-attachment: fixed!important; */
+}
+
+
 .list-group-item {
   line-height: 2.5;
 }
@@ -23,15 +34,10 @@
 
 }
 
-body{
 
-  background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2013/07/26/124271/a2af799eed5ed08b8e8d9bc7b914c148-700.jpg");
-}
 
-#jumbotron{
-  background-color: rgb(15, 15, 243)!important;
 
-}
+
 
 
 #petPholio{
@@ -41,27 +47,6 @@ font-size: 100px;
 margin-left: 100px;
 text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
-}
-
-#pawPrint{
-  height: 30px;
-  width: 30px;
-  margin-left: 100px;
-  margin-top: 60px;
-  color: white;
-
-}
-
-#pawPrint2{
-  height: 30px;
-  width: 30px;
-  margin-left: 100px;
-  margin-top: 20px;
-
-}
-
-#cat{
-  height: 50px;
 }
 
 #form{
@@ -77,9 +62,6 @@ text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 #opacity{
   opacity: .5;
   background-color: lightgray;
-  
-  
-  
 }
 
 #petPic{
