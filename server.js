@@ -5,6 +5,7 @@ var exphbs = require("express-handlebars");
 var passport = require("passport");
 var session = require("express-session");
 var env = require("dotenv").load();
+var exphbs = require("express-handlebars");
 
 var db = require("./models");
 
@@ -26,8 +27,10 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
+require("./routes/auth.js")(app);
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+
 
 var syncOptions = { force: false };
 
