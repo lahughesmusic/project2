@@ -3,6 +3,17 @@ body{
   /* background-color: lightblue!important; */
   
   background-image: url('bluebackground.png')!important;
+  background-attachment: fixed!important;
+
+}
+
+#style{
+  color: black;
+  text-align: center;
+}
+
+label{
+  color: black;
 }
 
 
