@@ -1,11 +1,17 @@
 <DOCTYPE html>
     <head>
             
-            
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="../public/js/index.js"></script>
             <link rel="stylesheet" href="../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
             <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            
+            <link rel="stylesheet" href="/resources/demos/style.css">
+            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
             
     </head>
 
@@ -19,30 +25,19 @@
               
         <form action="#">
                 <input placeholder="Name:" type="text" required />
-                <input placeholder="Date of Birth:" type="datetime" required />
-                <!-- <input placeholder="Breed:" type="text" required />
-                <input placeholder="Gender:" type="text" required />
-             
-                <h1>Emergency Information</h1>
-
-                <input placeholder="Vet Hospital Name:" type="text" required />
-                <input placeholder="Street Address:" type="text" required />
-                <input placeholder="City:" type="text" required />
-                <input placeholder="ZipCode:" type="text" required />
-                <input placeholder="PhoneNumber:" type="text" required />
-
-                <small>Emergency Contact</small>
-
-                <input placeholder="Name:" type="text" required />
-                <input placeholder="PhoneNumber:" type="text" required /> -->
-                
-             
-                
+                <input placeholder="Date of Birth:" type="text" id="datepicker" required />
+          
                 <input class="formBtn" type="submit" />
                 <input class="formBtn" type="reset" />
-              </form>
-     
-            
-    
-</body>
-</html>
+
+        </form>
+
+              <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                <input class="span2" size="16" type="text" value="12-02-2012">
+                <span class="add-on"><i class="icon-th"></i></span>
+              </div>
+
+</head>
+<body>
+ 
+
