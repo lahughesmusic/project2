@@ -31,6 +31,7 @@ require("./routes/auth.js")(app);
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
+require("./config/passport/passport.js")(passport, models.user);
 
 var syncOptions = { force: false };
 
