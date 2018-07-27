@@ -16,6 +16,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
+// For Passport
+app.use(
+  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+
 // Handlebars
 app.engine(
   "handlebars",
@@ -25,9 +32,26 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
+//Models
+var models = require("./models");
+
 // Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require("./routes/auth.js")(app, passport);
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
+
+//load passport strategies
+require("./config/passport/passport.js")(passport, models.user);
+
+//Sync Database
+models.sequelize
+  .sync()
+  .then(function() {
+    console.log("Database looks fine!");
+  })
+  .catch(function(err) {
+    console.log(err + "Something went wrong with the database!");
+  });
 
 var syncOptions = { force: false };
 
@@ -47,25 +71,3 @@ db.sequelize.sync(syncOptions).then(function() {
     );
   });
 });
-
-// For Passport
-app.use(
-  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-
-//Models
-var models = require("./app/models");
-
-//Sync Database
-models.sequelize
-  .sync()
-  .then(function() {
-    console.log("Nice! Database looks fine");
-  })
-  .catch(function(err) {
-    console.log(err, "Something went wrong with the Database Update!");
-  });
-
-module.exports = app;
