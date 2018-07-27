@@ -24,8 +24,11 @@ module.exports = function(app, passport) {
     res.redirect("/signin");
   }
 
-  app.post("/signin", passport.authenticate("local-signin", {
+  app.post(
+    "/signin",
+    passport.authenticate("local-signin", {
       successRedirect: "/dashboard",
       failureRedirect: "/tryagain"
-  }));
+    })
+  );
 };
